@@ -13,6 +13,6 @@ provider "aws" {
 
 resource "aws_instance" "app_server" {
   ami           = var.ami_id
-  instance_type = var.instance_type
-  tags = var.tags
+  instance_type = local.instance_config[terraform.workspace].instance_type
+  tags = merge(var.tags, local.instance_config[terraform.workspace].tags)
 }

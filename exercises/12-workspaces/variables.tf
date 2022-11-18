@@ -1,10 +1,3 @@
-variable "instance_type" {
-    type = string
-    description = "The instance type to use for the EC2 instance."
-    default = "t2.nano"
-    nullable = false
-}
-
 variable "ami_id" {
     type = string
     description = "The AMI identifier to use for EC2 instance."
