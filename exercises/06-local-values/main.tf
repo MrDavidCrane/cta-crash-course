@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.17.1"
+      version = "4.16.0"
     }
   }
 }
@@ -21,4 +21,8 @@ resource "aws_db_instance" "default" {
   password             = "foobarbaz"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
+	timeouts {
+		create = local.timeouts.create
+		delete = local.timeouts.delete
+	}
 }

@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.17.1"
+      version = "4.16.0"
     }
   }
 }
@@ -12,6 +12,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-077ee47512dc6f3ca"
-  instance_type = "t2.nano"
+  ami           = var.ami_id
+  instance_type = var.ami_instance_type
+	tags = var.ami_tags
+  vpc_security_group_ids = [data.aws_security_group.instance-connect.id]
 }
+

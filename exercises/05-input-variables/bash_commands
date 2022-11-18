@@ -1,0 +1,2 @@
+terraform plan -var='ami_tags={Name="Dave_Ex_5"}'
+terraform plan -var-file="terraform.tfvars"

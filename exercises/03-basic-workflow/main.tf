@@ -11,7 +11,11 @@ provider "aws" {
   region = "us-west-2"
 }
 
-resource "aws_instance" "app_server" {
+resource "aws_instance" "dave_app_server" {
   ami           = "ami-077ee47512dc6f3ca"
   instance_type = "t2.nano"
+
+	tags = {
+		Name = "Dave"
+	}
 }

@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.17.1"
+      version = "4.16.0"
     }
   }
 }
@@ -12,16 +12,16 @@ provider "aws" {
 }
 
 variable "instance_count" {
-    type = number
+    type = set(string)
     description = "The number of EC2 instances to be managed."
-    default = 3
+    default = ["1","2","3"]
 }
 
 resource "aws_instance" "app_server" {
-  count = var.instance_count
+	for_each = var.instance_count
   ami           = "ami-077ee47512dc6f3ca"
   instance_type = "t2.nano"
   tags = {
-    Name = "instance ${count.index}"
+    Name = "Dave Ex 10 - instance ${each.key}"
   }
 }
