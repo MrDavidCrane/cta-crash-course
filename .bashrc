@@ -29,11 +29,6 @@ fi
 	parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
  }
-	parse_tf_branch() {
-     terraform workspace list 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
- }
-
-
-  export PS1="#================================================\n[${MAGENTA}\u${RESET}@${YELLOW}\h] ${GREEN}\w ${CYAN}\$(parse_git_branch) ${RED}\$(parse_tf_branch)${RESET}\n\$ "        
+  export PS1="#================================================\n[${MAGENTA}\u${RESET}@${YELLOW}\h]\n${GREEN}Path: \w ${CYAN}\$(parse_git_branch)${RESET}\n\$ "        
   export PS2="  > "
 

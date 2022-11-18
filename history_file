@@ -1,0 +1,534 @@
+    1  cd
+    2  ll
+    3  git clone https://github.com/bmuschko/cta-crash-course
+    4  terraform --version
+    5  cd cta-crash-course/
+    6  ll
+    7  cd exercises/
+    8  ll
+    9  cd 01-installing-terraform/
+   10  ll
+   11  cd ..
+   12  ll
+   13  cd 02-basic-config-file/
+   14  ll
+   15  vi instructions.md 
+   16  ps -ef | grep crane
+   17  fg
+   18  vi instructions.md 
+   19  fg
+   20  vi instructions.md 
+   21  vi ~/.vimrc
+   22  top | grep crane
+   23  ps | grep crane
+   24  ps -ef | grep crane
+   25  vi ~/.vimrc
+   26  vim ~/.vimrc
+   27  exit
+   28  vi ~/.vimrc
+   29  tfswitch
+   30  aws configure
+   31  cd cta-crash-course/
+   32  ll
+   33  cd exercises/
+   34  ll
+   35  cd 02
+   36  ll
+   37  cd 02
+   38  cd 02-basic-config-file/
+   39  ll
+   40  type vi
+   42  alias vi="vim"
+   43  vi main.tf
+   44  vi solution/main.tf 
+   45  clear
+   49  vi ~/.vimrc
+   50  type vi
+   51  type vim
+   52  vim main.tf 
+   53  vi ~/.vimrc 
+   54  vim main.tf 
+   55  vi ~/.vimrc 
+   56  vim solution/main.tf 
+   57  clear
+   58  vi main.tf
+   59  terraform validate
+   60  terraform init
+   61  terraform validate
+   62  vi main.tf
+   63  terraform validate
+   64  ll -a
+   65  cd .terraform
+   66  ll
+   67  cd providers/
+   68  ll
+   69  cd registry.terraform.io/
+   70  ll
+   71  cd hashicorp/
+   72  ll
+   73  cd aws
+   74  ll
+   75  cd 4.16.0/
+   76  ll
+   77  cd linux_amd64/
+   78  ll
+   79  vi terraform-provider-aws_v4.16.0_x5 
+   80  cd ../../../..
+   81  cd ../../..
+   82  ll
+   83  diff solution/main.tf main.tf 
+   84  man diff
+   85  diff -b solution/main.tf main.tf 
+   86  vi main.tf 
+   87  diff -b solution/main.tf main.tf 
+   88  terraform validate
+   89  terraform plan
+   90  diff -b solution/main.tf main.tf 
+   91  aws sts get-caller-identity
+   92  vi main.tf 
+   93  terraform plan
+   94  cd ..
+   95  ll
+   96  cd 03-basic-workflow/
+   97  ll
+   98  vi main.tf 
+   99  terraform init
+  100  terraform validate
+  101  terraform plan
+  102  vi main.tf 
+  103  terraform apply
+  104  cd cta-crash-course/
+  105  ll
+  106  cd exercises/
+  107  ps -ef | grep dcran
+  108  cd 03-basic-workflow/
+  109  ll
+  110  terraform plan
+  111  terraform destroy
+  112  history
+  113  terraform apply
+  114  terraform plan
+  115  terraform destroy
+  116  vi main.tf 
+  117  terraform validate
+  118  vi main.tf 
+  119  terraform validate
+  120  vi main.tf 
+  121  terraform validate
+  122  terraform plan
+  123  terraform apply
+  124  terraform destroy
+  125  vi ~/.terraformrc
+  126  vi main.tf 
+  127  cd ../04-provisioner/
+  128  ll
+  129  vi main.tf 
+  130  vi install_apache.sh 
+  131  vi main.tf 
+  132  diff -b main.tf solution/main.tf 
+  133  vi main.tf 
+  134  terraform init
+  135  mkdir   tags = {
+  136      Name = "Dave"
+  137  mkdir ~/.terraform.d/plugin-cache:
+  138  mkdir ~/.terraform.d/plugin-cache
+  139  rmdir ~/.terraform.d/plugin-cache:
+  140  ll ~/.terraform.d/plugin-cache
+  141  terraform init
+  142  ll -d ~/.terraform.d/plugin-cache
+  143  vi ~/.terraformrc 
+  144  terraform init
+  145  vi main.tf 
+  146  terraform init
+  147  vi ~/.terraformrc 
+  148  rm ~/.terraformrc 
+  149  terraform init
+  150  df -kh .
+  151  rm -rf  ../02-basic-config-file/.terraform/providers/
+  152  rm -rf  ../03-basic-workflow/.terraform/providers/
+  153  df -kh .
+  154  sudo -l
+  155  df -kh .
+  156  vi ~/.terraformrc
+  157  ll -d ~/.terraform.d/plugin-cache
+  158  ll -a .ter*
+  159  terraform init
+  160  rm -rf .terraform
+  161  vi ~/.terraformrc
+  162  terraform init
+  163  vi ~/.terraformrc
+  164  rm -rf .terraform
+  165  rm -rf \~/.terraform.d/plugin-cache/
+  166  mkdir \~/.terraform.d/plugin-cache/
+  167  vi ~/.terraformrc
+  168  terraform init
+  169  vi main.tf 
+  170  terraform validate
+  171  terraform plan
+  172  terraform apply
+  173  vi main.tf 
+  174  terraform plan
+  175  terraform apply
+  176  curl http://ec2-18-236-220-168.us-west-2.compute.amazonaws.com/
+  177  vi install_apache.sh 
+  178  vi solution/main.tf 
+  179  diff -b main.tf solution/main.tf 
+  180  vi main.tf 
+  181  vi install_apache.sh 
+  182  vi main.tf 
+  183  vi install_apache.sh 
+  184  vi main.tf 
+  185  tarraform validate
+  186  terraform validate
+  187  terraform apply
+  188  curl ec2-54-189-36-230.us-west-2.compute.amazonaws.com
+  189  vi main.tf 
+  190  terraform apply
+  191  vi main.tf 
+  192  terraform apply
+  193  curl ec2-54-189-36-230.us-west-2.compute.amazonaws.com
+  194  cd cta-crash-course/exercises/04-provisioner/
+  195  ll
+  196  terraform plan
+  197  curl ec2-54-189-36-230.us-west-2.compute.amazonaws.com
+  198  curl ec2-34-212-52-203.us-west-2.compute.amazonaws.com
+  199  terraform destroy
+  200  cd ../05-input-variables/
+  201  ll
+  202  vi main.tf 
+  203  vi ../04-provisioner/main.tf 
+  204  vi main.tf 
+  205  df -kh .
+  206  vi variables.tf
+  207  terraform init
+  208  rm -rf .terraform
+  209  vi ~/.terraformrc 
+  210  terraform init
+  211  terraform validate
+  212  vi main.tf 
+  213  vi variables.tf 
+  214  vi main.tf 
+  215  vi variables.tf 
+  216  vi main.tf 
+  217  vi variables.tf 
+  218  terraform validate
+  219  vi variables.tf 
+  220  terraform validate
+  221  vi main.tf 
+  222  terraform validate
+  223  vi main.tf 
+  224  vi variables.tf 
+  225  terraform plan
+  226  terraform plan -var='ami_tags={Name="Dave_Ex_5"}'
+  227  vi terraform.tfvars
+  228  terraform plan -var-file="terraform.tfvars"
+  229  history
+  231  cd solution/
+  232  ll
+  233  vi main.tf 
+  234  vi variables.tf 
+  235  cd ..
+  236  vi variables.tf 
+  237  terraform plan
+  238  terraform apply
+  239  cd cta-crash-course/05
+  240  cd cta-crash-course/exercises/05
+  241  cd cta-crash-course/exercises/05-input-variables/
+  242  ll
+  243  terraform destroy
+  244  cd ../06-local-values/
+  245  vi main.tf 
+  246  ll
+  247  vi locals.tf
+  248  vi main.tf 
+  249  terraform init
+  250  terraform validate
+  251  vi main.tf 
+  252  vi solution/main.tf 
+  253  vi main.tf 
+  254  terraform validate
+  255  terraform plan
+  256  cd ../05-input-variables/
+  257  vi variables.tf 
+  258  vi main.tf 
+  259  cd ../06-local-values/
+  260  ll
+  261  vi main.tf 
+  262  cd ../07-output-values/
+  263  ll
+  264  vi main.tf 
+  265  ll
+  266  vi outputs.tf
+  267  terraform init
+  268  terraform plan
+  269  vi main.tf 
+  270  vi outputs.tf
+  271  terraform plan
+  272  vi outputs.tf
+  273  terraform plan
+  274  vi main.tf 
+  275  terraform apply
+  276  terraform destroy
+  277  cd ../08-data-source/
+  278  vi main.tf
+  279  terraform init
+  280  terraform plan
+  281  vi main.tf
+  282  terraform plan
+  283  vi main.tf
+  284  terraform plan
+  285  vi main.tf
+  286  terraform plan
+  287  vi main.tf
+  288  terraform plan
+  289  vi main.tf
+  290  terraform plan
+  291  vi main.tf
+  292  terraform output
+  293  vi main.tf 
+  294  cd ../09-loop/
+  295  ll
+  296  ll solution/
+  297  clear
+  298  vi main.tf
+  299  terraform init
+  300  terraform validate
+  301  vi main.tf 
+  302  terraform validate
+  303  terraform plan
+  304  terraform plan -var='instance_count=5'
+  305  diff -b main.tf solution/main.tf 
+  306  terraform apply
+  307  cd cta-crash-course/exercises/09-loop/
+  308  terraform destroy
+  309  vi main.tf 
+  310  exit
+  311  cd cta-crash-course/
+  312  cd exercises/
+  313  ll
+  314  cd 10-built-in-functions/
+  315  vi main.tf 
+  316  terraform init
+  317  terraform console
+  318  vi main.tf 
+  319  terraform plan
+  320  vi main.tf 
+  321  terraform plan
+  322  vi main.tf 
+  323  terraform plan -var='instance_count=["3","5","7","9"]'
+  324  vi main.tf 
+  325  vi solution/main.tf 
+  326  vi main.tf 
+  327  terraform validate
+  328  vi main.tf 
+  329  git branch
+  333  cd
+  336  cd cta-crash-course/
+  337  cd exercises/
+  344  cd
+  346  git branch
+  349  cd cta-crash-course/
+  350  cd
+  351  cd cta-crash-course/exercises/11-child-module/
+  353  vi main.tf 
+  354  terraform init
+  355  vi main.tf 
+  356  ll
+  357  mkdir modules
+  358  mkdir modules/ec2
+  359  vi main.tf 
+  360  vi modules/ec2/main.tf
+  361  vi modules/ec2/variables.tf
+  362  vi main.tf 
+  363  vi ../05-input-variables/main.tf 
+  364  vi ../05-input-variables/variables.tf 
+  365  vi main.tf 
+  366  vi modules/ec2/variables.tf
+  367  vi modules/ec2/outputs.tf
+  368  vi ../07-output-values/outputs.tf 
+  369  vi modules/ec2/outputs.tf
+  370  vi main.tf 
+  371  vi modules/ec2/main.tf 
+  372  terraform plan
+  373  vi main.tf 
+  374  terraform plan
+  375  terraform init
+  376  vi modules/ec2/variables.tf 
+  377  terraform init
+  378  terraform plan
+  379  vi main.tf 
+  380  terraform plan -var='ami_tags={Name="App Server"}'
+  381  vi modules/ec2/variables.tf 
+  382  terraform plan -var='aws_tags={Name="App Server"}'
+  383  top
+  384  ll
+  385  terraform plan -var='aws_tags={Name="App Server"}'
+  386  vi modules/ec2/variables.tf 
+  387  netstat
+  388  iostat
+  389  terraform plan -var='aws_tags={Name="App Server"}'
+  390  terraform plan -var='module.aws_instance.aws_tags={Name="App Server"}'
+  391  vi modules/ec2/main.tf 
+  392  vi main.tf 
+  393  terraform plan -var='tags={Name="App Server"}'
+  394  vi modules/ec2/main.tf 
+  395  vi main.tf 
+  396  terraform plan -var='tags={Name="App Server"}'
+  397  vi modules/ec2/main.tf 
+  398  vi main.tf 
+  399  vi solution/main.tf 
+  400  cd ../12-workspaces/
+  401  ll
+  402  vi main.tf 
+  403  terraform init
+  404  df -kh .
+  405  du -sh ~
+  406  git checkout -c dave_20221118
+  407  git checkout -b dave_20221118
+  408  git push origin
+  409  git push origin How temporary? What is the milestone for removal?
+  410  git push origin dave_20221118
+  411  ssh-keygen
+  412  vi ~/.ssh/id_rsa.pub 
+  413  vi ../../.git/config 
+  414  git push origin dave_20221118
+  415  vi ../../.git/config 
+  416  git push origin dave_20221118
+  417  vi ../../.git/config 
+  418  git add -A :/
+  419  git commit
+  420  git config --global user.email "github_public@dcrane.us"
+  421  git config --global user.name "David Crane"
+  422  git commit
+  423  vi ../../.gitignore 
+  424  git status
+  425  man git rm
+  429  git add -A :/
+  430  git commit
+  434  git status
+  435  git add -A :/
+  436  git commit
+  437  git push origin dave_20221118
+  439  cd ..
+  451  git checkout master
+  452  git pull origin master
+  453  git checkout dave_20221118
+  454  git rebase master
+  457  git push origin -f dave_20221118
+  458  ll
+  459  cd 12-workspaces/
+  460  ll
+  461  vi main.tf 
+  462  terraform workspace list
+  463  terraform workspace new dev
+  464  terraform workspace new prod
+  465  terraform workspace list
+  469  ll
+  470  terraform workspace select dev
+  471  vi locals.tf
+  472  vi main.tf 
+  473  vi locals.tf
+  474  vi main.tf 
+  475  vi locals.tf
+  476  vi main.tf 
+  477  vi variables.tf 
+  478  vi locals.tf 
+  479  vi main.tf 
+  480  terraform plan
+  481  vi locals.tf 
+  482  vi main.tf 
+  483  vi locals.tf 
+  484  vi main.tf 
+  485  terraform plan
+  486  vi main.tf 
+  487  vi variables.tf 
+  488  vi locals.tf 
+  489  vi main.tf 
+  490  terraform plan
+  491  terraform workspace select prod
+  492  terraform plan
+  493  history | less
+  495  git status
+  496  git diff
+  497  git workspace delete dev
+  498  terraform workspace delete dev
+  499  terraform workspace delete prod
+  500  terraform workspace select default
+  501  terraform workspace delete prod
+  502  git status
+  503  git add -A :/
+  504  git commit
+  505  git push origin
+  506  git push --set-upstream origin dave_20221118
+  507  git push origin
+  508  cd ../13-resource-drift/
+  509  ll
+  510  vi main.tf 
+  511  terraform init
+  512  terraform plan
+  513  git status
+  514  git add main.tf 
+  515  git commit
+  516  git push
+  517  cd ../14-validate-format-cmds/
+  518  ll
+  519  vi *.tf
+  520  vi main.tf 
+  521  terraform validate
+  522  vi main.tf 
+  523  vi outputs.tf 
+  524  terraform validate
+  525  vi outputs.tf 
+  526  vi main.tf 
+  527  terraform init
+  528  terraform validate
+  529  vi main.tf 
+  530  vi variables.tf 
+  531  terraform validate
+  532  vi main.tf 
+  533  terraform validate
+  534  terraform fmt
+  535  vi *.tf
+  536  git diff
+  537  git status
+  538  git add -A :/
+  539  git commit
+  540  git push
+  580  echo $PROMPT
+  590  terraform workspace
+  591  terraform workspace list
+  592  ll -a
+  593  cd cta-crash-course/exercises/14-validate-format-cmds/
+  594  terraform plan
+  596  vi main.tf 
+  597  terraform plan
+  598  git status
+  599  git add -A :/
+  600  git commit
+  604  cd
+  610  terraform workspace
+  611  terraform workspace show
+  612  terraform workspace list
+  615  cd
+  616  cd cta-crash-course/
+  618  cd exercises/14-validate-format-cmds/
+  619  cd ..
+  621  cd 12-workspaces/
+  629  terraform workspace
+  638  cd ../15-import-state-cmds/
+  639  ll
+  640  vi main.tf 
+  641  terraform init
+  642  terraform apply
+  643  cd cta-crash-course/exercises/15-import-state-cmds/
+  644  terraform state rm aws_instance.app_server
+  645  terraform import aws_instance.app_server i-08b6f8219ee9fc8c1
+  646  terraform plan
+  647  terraform destroy
+  648  git status
+  649  vi ../../.gitignore 
+  650  git status
+  651  git add -A :/
+  652  git commit
+  653  git push
+  655  history > ../../history_file
